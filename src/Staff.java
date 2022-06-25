@@ -1,4 +1,4 @@
-public class Staff extends User {
+abstract class Staff extends User {
     private String nik;
 
     public Staff(String nama, String alamat, String telepon, String ttl, String nik) {
@@ -6,11 +6,18 @@ public class Staff extends User {
         this.nik = nik;
     }
 
-    public String getNik() {
-        return nik;
-    }
+    abstract String getNik();
 
-    public void setNik(String nik) {
-        this.nik = nik;
+    abstract void setNik(String nik);
+
+    @Override
+    public String toString() {
+        return "Staff{" +
+                "nik='" + nik + '\'' +
+                ", nama='" + nama + '\'' +
+                ", alamat='" + alamat + '\'' +
+                ", telepon='" + telepon + '\'' +
+                ", ttl='" + ttl + '\'' +
+                '}';
     }
 }

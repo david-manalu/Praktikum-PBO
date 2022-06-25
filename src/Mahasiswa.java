@@ -8,28 +8,23 @@ abstract class Mahasiswa extends User{
         this.jurusan = jurusan;
     }
 
-    public String getNim() {
-        return nim;
-    }
+    abstract String getNim();
 
-    public String getJurusan() {
-        return jurusan;
-    }
+    abstract String getJurusan();
 
-    public void setNim(String nim) {
-        this.nim = nim;
-    }
+    abstract void setNim(String nim);
 
-    public void setJurusan(String jurusan) {
-        this.jurusan = jurusan;
-    }
+    abstract void setJurusan(String jurusan);
 
-    public void printMahasiswa() {
-        System.out.println("Nama: " + nama);
-        System.out.println("Alamat: " + alamat);
-        System.out.println("Telepon: " + telepon);
-        System.out.println("TTL: " + ttl);
-        System.out.println("NIM: " + nim);
-        System.out.println("Jurusan: " + jurusan);
+    @Override
+    public String toString() {
+        return "Mahasiswa{" +
+                "nim='" + nim + '\'' +
+                ", jurusan='" + jurusan + '\'' +
+                ", nama='" + nama + '\'' +
+                ", alamat='" + alamat + '\'' +
+                ", telepon='" + telepon + '\'' +
+                ", ttl='" + ttl + '\'' +
+                '}';
     }
 }

@@ -11,42 +11,30 @@ abstract class User {
         this.ttl = ttl;
     }
 
-    public String getNama() {
-        return nama;
+    abstract String getNama();
+
+    abstract String getAlamat();
+
+    abstract String getTelepon();
+
+    abstract String getTtl();
+
+    abstract void setNama(String nama);
+
+    abstract void setAlamat(String alamat);
+
+    abstract void setTelepon(String telepon);
+
+    abstract void setTtl(String ttl);
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "nama='" + nama + '\'' +
+                ", alamat='" + alamat + '\'' +
+                ", telepon='" + telepon + '\'' +
+                ", ttl='" + ttl + '\'' +
+                '}';
     }
 
-    public String getAlamat() {
-        return alamat;
-    }
-
-    public String getTelepon() {
-        return telepon;
-    }
-
-    public String getTtl() {
-        return ttl;
-    }
-
-    public void setNama(String nama) {
-        this.nama = nama;
-    }
-
-    public void setAlamat(String alamat) {
-        this.alamat = alamat;
-    }
-
-    public void setTelepon(String telepon) {
-        this.telepon = telepon;
-    }
-
-    public void setTtl(String ttl) {
-        this.ttl = ttl;
-    }
-
-    public void printUser() {
-        System.out.println("Nama: " + nama);
-        System.out.println("Alamat: " + alamat);
-        System.out.println("Telepon: " + telepon);
-        System.out.println("TTL: " + ttl);
-    }
 }
